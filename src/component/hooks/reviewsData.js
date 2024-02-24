@@ -1,4 +1,4 @@
-export default reviewsData = [
+export const reviewsData = [
   {
     id: 1,
     name: '<1>',
