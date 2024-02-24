@@ -12,6 +12,11 @@ const Cards = () => {
     review > 0 ? setReview((prev) => prev - 1) : setReview(data.length - 1)
   }
 
+  const randomFunc = () => {
+    const rand = Math.floor(Math.random() * data.length)
+    setReview(rand)
+  }
+
   return (
     <>
       <div className="h-[100vh] w-[100vw] bg-zinc-300 flex flex-col text-center items-center justify-center">
@@ -28,16 +33,22 @@ const Cards = () => {
         </div>
         <div>
           <button
-            className=" bg-red-400 text-white w-[150px] h-[40px]"
+            className=" bg-red-400 text-white w-[100px] h-[40px]"
             onClick={prevFunc}
           >
             prev
           </button>
           <button
-            className=" bg-red-400 text-white w-[150px] h-[40px]"
+            className=" bg-red-400 text-white w-[100px] h-[40px]"
             onClick={nextFunc}
           >
             next
+          </button>
+          <button
+            className=" bg-red-400 text-white w-[100px] h-[40px]"
+            onClick={randomFunc}
+          >
+            random
           </button>
         </div>
       </div>
