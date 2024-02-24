@@ -1,6 +1,6 @@
-import react from 'react'
+import Cards from './component/Cards.jsx'
 function App() {
-  return <h1>Hello World</h1>
+  return <Cards />
 }
 
 export default App
