@@ -14,18 +14,31 @@ const Cards = () => {
 
   return (
     <>
-      <div>
+      <div className="h-[100vh] w-[100vw] bg-zinc-300 flex flex-col text-center items-center justify-center">
         <div>
           {
-            <div key={data[review].id}>
+            <div
+              key={data[review].id}
+              className="h-[500px] w-[300px] bg-zinc-700 text-white flex flex-col text-center items-center justify-center"
+            >
               <h1>{data[review].name}</h1>
               <p>{data[review].review}</p>
             </div>
           }
         </div>
         <div>
-          <button onClick={prevFunc}>prev</button>
-          <button onClick={nextFunc}>next</button>
+          <button
+            className=" bg-red-400 text-white w-[150px] h-[40px]"
+            onClick={prevFunc}
+          >
+            prev
+          </button>
+          <button
+            className=" bg-red-400 text-white w-[150px] h-[40px]"
+            onClick={nextFunc}
+          >
+            next
+          </button>
         </div>
       </div>
     </>
